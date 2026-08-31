@@ -67,9 +67,9 @@ a{
     transition: 1s;
 }
 
-a:hover {
+/* a:hover {
     font-family: "Yellowtail";
-}
+} */
 
 .hero {
     width: 100%;
@@ -80,6 +80,11 @@ a:hover {
     background-image: url("resources/Banner.png");
     background-position: center;
     background-size: cover;
+}
+
+h1 {
+    background-color: #fff;
+    padding: 1vh 2vw;
 }
 
 .sectcontainer{
@@ -94,7 +99,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
 
 }
 
@@ -118,7 +123,13 @@ a:hover {
 }
 
 section > div {
-    width: 100%;
+    width: 90%;
+    margin: 4vh 5vw 8vh;
+}
+
+section > p {
+    width: 90%;
+    font-size: 1.5rem;
 }
 
 .image {
@@ -126,7 +137,7 @@ section > div {
     height: 60vh;
     margin: 0;
     align-content: center;
-      position: relative;
+    position: relative;
 }
 
 .image > img{
@@ -138,25 +149,58 @@ section > div {
     height: 60vh;
     object-fit: cover;
     margin: 0;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+}
+
+.popImg , .dealImg {
+    margin-bottom: 10vh;
+}
+
+.localImg {
+    margin-bottom: 4vh;
+}
+
+.location > p {
+    margin-bottom: 5vh 0;
 }
 
 figcaption {
     position: absolute;
     display: flex;
     bottom: 0;
+    transform:translateY(50%);
     width: 100%;
     padding: 3vh 0;
     align-content: center;
     justify-content: center;
+    background-color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 100% 100% 0% 0%;
+}
+
+.popular figcaption {
+    background-color: #F13D19;
+}
+
+.menu figcaption{
+    background-color: #FD7E1F;
+}
+
+.location figcaption {
+    background-color: #F13D19;
+    text-align: center;
 }
 
 footer{
-     width: 100%;
+    swidth: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: fit-content;
-    background-color: #DD0D1A;
+    background-image: linear-gradient(to bottom, #FCC032, #DD0D1A);
+    bottom: 0;
 }
 
 footer > div {
@@ -173,4 +217,45 @@ ul {
     justify-content: space-between;
     text-decoration: none;
     font-size: small;
+}
+
+@media (max-width: 767px) {
+    body{
+        width: 100%;
+    }
+    .logo{
+        height: 100%;
+    }
+    .image{
+        height: 40vh;
+    }
+    .image > img {
+        height: 100%;
+    }
+    figcaption {
+        bottom: 0;
+        transform: translateY(50%);
+    }
+    .location figcaption {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 450px) {
+    body{
+        width: 100%;
+    }
+
+    .image{
+        height: 20vh;
+    }
+    .image > img {
+        height: 100%;
+    }
+    figcaption {
+        bottom: 0;
+        transform: translateY(50%);
+        margin: 0;
+        height: .1vh;
+    }
 }
