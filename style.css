@@ -25,7 +25,8 @@ header{
     width: 100%;
     height: fit-content;
     background-image: linear-gradient(to bottom, #FCC032, #DD0D1A);
-    font-family: "Yellowtail", inherit;
+    font-family: "Yellowtail", sans-serif;
+    box-shadow: 5px 5px 30px;
 }
 
 .navcontainer {
@@ -38,7 +39,6 @@ header{
 
 .logolink {
     width: 50%;
-    /* border-radius: 50%; */
     display: flex;
     justify-content: left;
     align-items: center;
@@ -50,6 +50,7 @@ header{
     height: 170%;
     position: absolute;
     top: 0;
+    filter: drop-shadow(5px 5px 30px);
 }
 
 nav {
@@ -70,6 +71,7 @@ a{
 a:hover {
     background-image: linear-gradient(to bottom, rgb(232, 181, 106) 0, #99999900);
     border-radius: 25%;
+     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     /* opacity: 50; */
 }
 
@@ -85,8 +87,16 @@ a:hover {
 }
 
 h1 {
-    background-color: #fff;
+    background-color: #ffffff00;
+    font-size: 2.5rem;
     padding: 1vh 2vw;
+    color: #DD0D1A;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+hr {
+    width: 90%;
+    border-top: 2px solid #000;
 }
 
 .sectcontainer{
@@ -140,6 +150,8 @@ section > p {
     margin: 0;
     align-content: center;
     position: relative;
+    /* box-shadow: 5px 5px 30px; */
+    filter: drop-shadow(5px 5px 30px);
 }
 
 .image > img{
@@ -164,7 +176,7 @@ section > p {
 }
 
 .location > p {
-    margin-bottom: 5vh 0;
+    margin-bottom: 5vh;
 }
 
 figcaption {
@@ -195,7 +207,75 @@ figcaption {
     text-align: center;
 }
 
+#menu {
+    font-size: 2.5rem;
+}
 
+.fullmenu {
+    background-color: #F13D19;
+}
+
+.menuImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuImg >.image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+    aspect-ratio: 1;
+    width: clamp(180px, 30vw, 300px);
+    margin:3vh auto;
+}
+
+.menuImg img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 10%;
+}
+
+.im {
+    display: flex;
+    position: relative;
+    aspect-ratio: 1;
+    height: auto;
+    width: 100%;    
+    margin: 0;
+}
+
+.im > figcaption{
+    bottom: 0;
+    transform: none;
+    border-radius: 50% 50% 5% 5%;
+    background-color: #FD7E1F;
+}
+
+.meat {
+    text-align: center;
+    width: 95%;
+    color: #000;
+    background-color: #6b3913;
+    margin: 0 auto;
+    padding: 1vh 0;
+}
+
+.bun {
+    height: 4vh;
+    border-radius: 15% 15% 5% 5%;
+    background-color: #FD7E1F;
+    margin: 0;
+}
 
 footer{
     width: 100%;
